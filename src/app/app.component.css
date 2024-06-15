@@ -1,5 +1,37 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+:host {
+    display: block;
+    background: url('/assets/background/bridge-1127638.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
 p {
     color: red;
     padding: 15px;
 }
 
+.button-menu{
+    background: url('/assets/background/src/Menu_icon_2_icon-icons.com_71856.png');
+}
+
+.background-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    align-items: flex-start;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.content-container {
+    background-color: #7b1fa2a8;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+}
