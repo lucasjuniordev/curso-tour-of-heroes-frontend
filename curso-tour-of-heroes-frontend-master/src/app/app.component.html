@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+    <span class="title-site">{{ title }}</span>
+</mat-toolbar>
+
+<div class = "background-container">
+    <div class = "content-container">
+      <span class="example-spacer"></span>
+
+      <button mat-icon-button aria-label="Home" matTooltip="Home" routerLink="">
+        <mat-icon>home</mat-icon>
+      </button>
+
+      <button mat-icon-button aria-label="Heroes List" matTooltip="Heroes" routerLink="/heroes" class="hero-button">
+        <mat-icon>sports_martial_arts</mat-icon>
+      </button>
+
+      <button mat-icon-button aria-label="Dashboard" matTooltip="Dashboard" routerLink="/dashboard" class="dashboard-button">
+        <mat-icon>dashboard</mat-icon>
+      </button>
+
+        <router-outlet></router-outlet>
+        <app-messages></app-messages>
+    </div>
+</div>
+
+<app-current-time-exemplo></app-current-time-exemplo>

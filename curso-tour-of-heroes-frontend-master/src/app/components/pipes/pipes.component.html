@@ -1,0 +1,29 @@
+<div class="class">
+    <!-- Converte o texto para letras maiúsculas -->
+    <h1>{{ exemplosPipes | uppercase }}</h1>
+
+    <!-- Converte o texto para letras formatadas de titulos -->
+    <h2>{{ textoTitulo | titlecase }}</h2>
+
+    <!-- Data completa -->
+    <p>{{ hoje }}</p>
+
+    <!-- Formata a data em um formato de data completa -->
+    <p>Date: {{ today | date:'fullDate' }}</p>
+
+    <!-- Formata o número como moeda (USD) -->
+    <p>Currency: {{ valoresUSD | currency:'USD' }}</p>
+
+    <!-- Inverte o texto usando o pipe personalizado -->
+    <p>Reverse: {{ exemplosPipesReverse | reverse }}</p>
+
+    <!-- Converte o objeto para uma string JSON -->
+    <p>JSON: {{ object | json }}</p>
+
+    <!-- Exibe o valor resolvido de uma promise ou observable -->
+    <p>Async: {{ asyncValue | async }}</p>
+
+    <!-- Formata o número como porcentagem -->
+    <p>Percent: {{ 0.25 | percent }}</p>
+
+</div>
