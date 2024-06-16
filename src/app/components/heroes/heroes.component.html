@@ -2,10 +2,20 @@
     <h1 class="title">My Heroes</h1>
 </div>
 
-    <div class="class" >
-        <ul class="heroes">
-            <li *ngFor="let hero of heroes" routerLink="/heroes/{{ hero.id }}">
-                <span>{{ hero.id }}</span> {{ hero.name }}
-            </li>
-        </ul>
-    </div>
+    <mat-table [dataSource]="heroes" class="mat-elevation-z8">
+      <!-- ID -->
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+        <mat-cell *matCellDef="let row" class="number"> {{row.id}} </mat-cell>
+      </ng-container>
+
+      <!-- Name -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let row" class="name"> {{row.name}} </mat-cell>
+      </ng-container>
+
+      <!-- Header and Row Declarations -->
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns" [routerLink]="['/heroes', row.id]" class="listing" ></mat-row>
+    </mat-table>

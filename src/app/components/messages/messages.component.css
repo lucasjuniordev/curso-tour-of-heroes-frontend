@@ -1,3 +1,12 @@
 body {
   background-color: red;
 }
+
+.padding-class{
+  padding-top: 10px;
+}
+
+.mat-expansion-panel
+{
+  color: aqua;
+}

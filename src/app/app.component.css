@@ -2,11 +2,23 @@
   flex: 1 1 auto;
 }
 
+.dashboard-button,
+.hero-button {
+  position: relative;
+  align-items: center;
+  margin-left: 355px;
+}
+
+.mat-icon {
+  font-size: 50px; /* Define o tamanho do ícone */
+  width: 50px; /* Define a largura do ícone */
+  height: 20px; /* Define a altura do ícone */
+}
 
 :host {
     display: block;
-    background: url('/assets/background/bridge-1127638.jpg');
-    background-position: center center;
+    background: url('/assets/background/wp3249271-hd-wallpaper-red.jpg');
+    background-position: left left;
     background-size: cover;
 }
 
@@ -34,4 +46,6 @@ p {
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 25px;
+    width: 120vh;
+    height: 80vh;
 }

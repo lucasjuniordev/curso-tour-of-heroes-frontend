@@ -1,31 +1,73 @@
 @keyframes blink {
-  0% {
-    background-color: #ffffff95;
+  0%, 100% {
+    background-color: #ffffff; /* Cor inicial e final */
   }
 
   50% {
-    background-color: #ffffff1c;
-    ;
-  }
-
-  100% {
-    background-color: #ffffff95;
+    background-color: #ba68c8; /* Cor intermediária */
   }
 }
 
-div {
-  background-color: #00000095;
-  color: #000000;
-  font-size: 20px;
-  font-style: italic;
-  font-family: Arial,
-  Helvetica,
-  sans-serif;
+@keyframes blink2 {
+  0%, 100% {
+    background-color: #ffffff; /* Cor inicial e final */
+  }
+
+  50% {
+    background-color: #9c27b0; /* Cor intermediária */
+  }
+}
+
+.pulsing-box {
+  width: 200px; /* Largura da div interna */
+  height: 1px; /* Altura da div interna */
+  background-color: #ffffff; /* Cor inicial da div interna */
+  animation: blink 2s infinite; /* Aplica a animação à div interna */
+  border-radius: 15px; /* Bordas arredondadas da div interna */ /* Margem interna */
+}
+
+.content-container {
+  text-align: center;
+}
+
+.background-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh; /* Altura da div principal */
+  background-color: #f0f0f0; /* Cor de fundo */
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% center; /* Início do gradiente à esquerda */
+  }
+  100% {
+    background-position: 100% center; /* Fim do gradiente à direita */
+  }
+}
+
+.rainbow{
+  font-size: 24px;
   font-weight: bold;
-  padding-left: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  background: linear-gradient(to right, #e91e63, #cb9100, #a63fb5, #5e136b, yellow, #a63fb5, red); /* Cores do arco-íris */
+  background-size: 200% auto; /* Tamanho do gradiente */
+  animation: moveGradient 750ms linear infinite; /* Animar o gradiente */
+  -webkit-background-clip: text; /* Aplicar o gradiente ao texto */
+  -webkit-text-fill-color: transparent;
+}
+
+div {
+  background-color: #ffffff;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  position: center;
+  padding-top: 25px;
+  padding-bottom: 10px;
   border-radius: 5px;
-  margin-bottom: 5px;
-  animation: blink 3050ms infinite;
+  animation: blink2 4s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

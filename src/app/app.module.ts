@@ -2,16 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { MatToolbarModule} from '@angular/material/toolbar';
-import { MatIconModule} from '@angular/material/icon';
-import { MatButtonModule} from '@angular/material/button';
-import { MessagesComponent } from './components/messages/messages.component';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
-import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatListModule } from '@angular/material/list';
-import { MatInputModule } from '@angular/material/input';
+import { MaterialModule } from './material/material.module';
 
 import { AppComponent } from './app.component';
 import { FirstComponentComponent } from './components/first-component/first-component.component';
@@ -22,6 +14,7 @@ import { EventsComponent } from './components/events/events.component';
 import { EmitterComponent } from './components/emitter/emitter.component';
 import { ChangeNumberComponent } from './components/change-number/change-number.component';
 import { ListRenderComponent } from './components/list-render/list-render.component';
+import { MessagesComponent } from './components/messages/messages.component'; 
 import { PipesComponent } from './components/pipes/pipes.component';
 import { ReversePipe } from './reverse.pipe';
 import { CurrentTimeExemploComponent } from './components/current-time-exemplo/current-time-exemplo.component';
@@ -31,6 +24,7 @@ import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeHeroesComponent } from './components/home-heroes/home-heroes.component';
+
 
 
 
@@ -60,14 +54,7 @@ import { HomeHeroesComponent } from './components/home-heroes/home-heroes.compon
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatExpansionModule,
-    MatTooltipModule,
-    MatListModule,
-    MatCardModule,
-    MatInputModule,
+    MaterialModule,
     FlexLayoutModule.withConfig({
       addFlexToParent: true,
       addOrientationBps: true,

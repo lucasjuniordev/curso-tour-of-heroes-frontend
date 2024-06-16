@@ -11,6 +11,7 @@ import { HeroService } from 'src/app/service/hero.service';
 })
 
 export class HeroesComponent implements OnInit {
+  displayedColumns: string[] = ['id', 'name'];
   heroes: Hero[] = [];
 
   constructor(private heroService: HeroService) {}

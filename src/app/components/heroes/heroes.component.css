@@ -1,16 +1,57 @@
-@keyframes blink {
+@keyframes rainbow {
   0% {
-    background-color: #ffffff95;
+    color: #ff0000;
   }
-
-  50% {
-    background-color: #ffffff1c;;
+  20% {
+    color: #ff7f00;
   }
-
+  40% {
+    color: #ffff00;
+  }
+  60% {
+    color: #00ff00;
+  }
+  80% {
+    color: #0000ff;
+  }
   100% {
-    background-color: #ffffff95;
+    color: #8b00ff;
   }
 }
+
+@keyframes background-transition {
+  0% {
+    color: #ffffff;
+  }
+  33% {
+    color: #2e2d2d;
+  }
+  66% {
+    color: #1a1a1a;
+  }
+  100% {
+    color: #2a2929;
+  }
+}
+
+@keyframes moveRightAndBack {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+/* @keyframes scaleUpAndDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+} */
+
 
 .title{
   position: absolute;
@@ -18,24 +59,38 @@
     transform: translate(-50%, -50%);
 }
 
-.heroes{
-    cursor: pointer;
-    list-style-type: none;
-    padding: 0;
+.mat-cell.number:hover {
+  animation: rainbow 1.4s infinite;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.heroes li {
-  padding: 5px;
-  margin: 5px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  transition: transform 0.5s ease, background-color 0.5s ease;
+.mat-cell.name:hover {
+  animation: rainbow 1.4s infinite;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.heroes li:hover {
-  background-color: #f0f0f0;
+.listing:hover {
+  background-color: rgba(39, 8, 49, 0.5);
+  cursor: pointer;
+  transition: background 1.5s ease;
 }
+
+.mat-cell.number:hover {
+  transition: transform  2.2s ease;
+  animation: moveRightAndBack 2.2s ease-in-out infinite alternate, rainbow 1.4s infinite;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.mat-cell.name:hover  {
+  transition: transform  2.2s ease;
+  animation: moveRightAndBack 2.2s ease-in-out infinite alternate, rainbow 1.4s infinite;
+  font-size: 25px;
+  font-weight: bold;
+}
+
 
 
 
