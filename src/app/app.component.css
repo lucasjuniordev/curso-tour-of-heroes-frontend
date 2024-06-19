@@ -2,17 +2,24 @@
   flex: 1 1 auto;
 }
 
-.dashboard-button,
+.dashboard-button, .home-button,
 .hero-button {
   position: relative;
   align-items: center;
-  margin-left: 355px;
+  margin: 90px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #7b1fa2a8;
 }
 
 .mat-icon {
   font-size: 50px; /* Define o tamanho do ícone */
   width: 50px; /* Define a largura do ícone */
   height: 20px; /* Define a altura do ícone */
+  color: black;
 }
 
 :host {
@@ -49,3 +56,25 @@ p {
     width: 120vh;
     height: 80vh;
 }
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Garante que o toolbar ocupe 100% da largura */
+}
+
+.profile-left, .profile-right {
+  display: flex;
+  align-items: center;
+}
+
+.title-site {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap; /* Garante que o título não quebre */
+}
+
+

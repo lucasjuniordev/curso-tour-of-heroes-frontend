@@ -1,30 +1,51 @@
 <div class="class2">
   <mat-toolbar color="primary">
+
+    <div class="profile-left">
+      <button mat-icon-button [matMenuTriggerFor]="menuLeft">
+        <mat-icon>list_outlined</mat-icon>
+      </button>
+      <mat-menu #menuLeft="matMenu" yPosition="above" xPosition="before">
+        <button mat-menu-item>Home</button>
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Help</button>
+      </mat-menu>
+    </div>
+
     <span class="title-site">{{ title }}</span>
+
+    <div class="profile-right">
+      <button mat-icon-button [matMenuTriggerFor]="menuRight">
+        <mat-icon>person_outline_outlined</mat-icon>
+      </button>
+      <mat-menu #menuRight="matMenu" yPosition="above" xPosition="before">
+        <button mat-menu-item>Profile Information</button>
+        <button mat-menu-item>My Heroes</button>
+        <button mat-menu-item>Change Password</button>
+        <button mat-menu-item>Exit</button>
+      </mat-menu>
+    </div>
+
   </mat-toolbar>
 </div>
 
-
-<div class = "background-container">
-    <div class = "content-container">
-      <span class="example-spacer"></span>
-
-      <button mat-icon-button aria-label="Home" matTooltip="Home" routerLink="">
-        <mat-icon>home</mat-icon>
-      </button>
-
-      <button mat-icon-button aria-label="Heroes List" matTooltip="Heroes" routerLink="/heroes" class="hero-button">
-        <mat-icon>sports_martial_arts</mat-icon>
-      </button>
-
-      <button mat-icon-button aria-label="Dashboard" matTooltip="Dashboard" routerLink="/dashboard" class="dashboard-button">
-        <mat-icon>dashboard</mat-icon>
-      </button>
-
-        <router-outlet></router-outlet>
-        <app-messages></app-messages>
-    </div>
+<div class="background-container">
+  <div class="content-container">
+    <span class="example-spacer"></span>
+    <button mat-icon-button aria-label="Home" matTooltip="Home" routerLink="" class="home-button">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Heroes List" matTooltip="Heroes" routerLink="/heroes" class="hero-button">
+      <mat-icon>sports_martial_arts</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Dashboard" matTooltip="Dashboard" routerLink="/dashboard" class="dashboard-button">
+      <mat-icon>dashboard</mat-icon>
+    </button>
+    <router-outlet></router-outlet>
+    <app-messages></app-messages>
+  </div>
 </div>
-<div class="class2"><app-current-time-exemplo></app-current-time-exemplo></div>
 
-
+<div class="class2">
+ <app-current-time-exemplo></app-current-time-exemplo>
+</div>

@@ -29,17 +29,20 @@ a {
     border-bottom: 2px solid #b20cb8;
     padding: 2em;
     margin-bottom: 1em;
+    position: relative;
 }
 
 .class2 {
   border-bottom: 2px solid #b20cb8;
   border-top: 2px solid #b20cb8;
   padding: 2em;
-  margin-bottom: 1em;
 }
 
 html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita overflow horizontal */
 }
 
 body {

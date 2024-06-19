@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material/material.module';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppComponent } from './app.component';
 import { FirstComponentComponent } from './components/first-component/first-component.component';
@@ -14,7 +15,7 @@ import { EventsComponent } from './components/events/events.component';
 import { EmitterComponent } from './components/emitter/emitter.component';
 import { ChangeNumberComponent } from './components/change-number/change-number.component';
 import { ListRenderComponent } from './components/list-render/list-render.component';
-import { MessagesComponent } from './components/messages/messages.component'; 
+import { MessagesComponent } from './components/messages/messages.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { ReversePipe } from './reverse.pipe';
 import { CurrentTimeExemploComponent } from './components/current-time-exemplo/current-time-exemplo.component';
@@ -24,6 +25,8 @@ import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeHeroesComponent } from './components/home-heroes/home-heroes.component';
+import { ProfileHeaderComponent } from './components/profile-header/profile-header.component';
+
 
 
 
@@ -48,6 +51,7 @@ import { HomeHeroesComponent } from './components/home-heroes/home-heroes.compon
     DashboardComponent,
     HomeHeroesComponent,
     MessagesComponent,
+    ProfileHeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +59,7 @@ import { HomeHeroesComponent } from './components/home-heroes/home-heroes.compon
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MatMenuModule,
     FlexLayoutModule.withConfig({
       addFlexToParent: true,
       addOrientationBps: true,
